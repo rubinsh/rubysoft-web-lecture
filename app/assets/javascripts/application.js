@@ -13,3 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function updateDescription(taskId, description) {
+  $.ajax({
+    url: "/tasks/" + taskId + ".json",
+    type: "PUT",
+    data: {task: {description: description}}
+  }).done(function (data, textStatus, jqXHR ) {
+      alert("description was changed successfully!");
+    });
+}
