@@ -22,3 +22,7 @@ function updateDescription(taskId, description) {
       alert("description was changed successfully!");
     });
 }
+
+function setClass(className) {
+  $('td').toggleClass(className);
+}
